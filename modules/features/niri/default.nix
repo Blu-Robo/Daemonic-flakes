@@ -5,7 +5,7 @@
       package = self.packages.${pkgs.stdenv.hostPlatform.system}.myNiri;
     };
   };
-  perSystem = { pkgs, lib, ... }: {
+  perSystem = { pkgs, lib, inputs', ... }: {
     packages.myNiri = inputs.wrapper-modules.wrappers.niri.wrap {
       inherit pkgs;	
       settings = {
@@ -17,8 +17,8 @@
 	  };
 	};
 	spawn-at-startup = [
-	  "${lib.getExe pkgs.dms-shell} run"
-	  "zen"
+	  "${lib.getExe inputs'.zen-browser.packages.default}"
+
 	];
 	binds = {
 	  "Mod+Q".spawn-sh = lib.getExe pkgs.kitty;

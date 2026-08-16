@@ -18,9 +18,9 @@
       settings = {
         user = {
 	  email = "brett-klenklen@proton.me";
-	  name = "blu_robo";
+	  name = "blu-robo";
 	};
-	#credential-helper = "store";
+	credential.helper = "store";
       };
     };
   };

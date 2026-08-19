@@ -8,10 +8,10 @@
       enable = true;
       pinentryPackage = pkgs.pinentry-all;
     };
-    programs.ssh = {
-      startAgent = true;
-      extraConfig = "AddKeysToAgent yes";
-    };
+#    programs.ssh = {
+#      startAgent = true;
+#      extraConfig = "AddKeysToAgent yes";
+#    };
   };
   perSystem = { pkgs, lib, self', ... }: {
     packages.git = inputs.wrapper-modules.wrappers.git.wrap {

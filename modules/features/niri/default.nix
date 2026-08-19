@@ -25,6 +25,9 @@
 	  "Mod+C".close-window = {};
 	  "XF86MonBrightnessUp".spawn-sh = "${pkgs.brightnessctl}/bin/brightnessctl set 5%+";
 	  "XF86MonBrightnessDown".spawn-sh = "${pkgs.brightnessctl}/bin/brightnessctl set 5%-";
+	  "XF86AudioMute".spawn-sh = "${pkgs.pulseaudio}/bin/pactl set-sink-mute @DEFAULT_SINK@ toggle";
+	  "XF86AudioRaiseVolume".spawn-sh = "${pkgs.pulseaudio}/bin/pactl set-sink-volume @DEFAULT_SINK@ +5%";
+	  "XF86AudioLowerVolume".spawn-sh = "${pkgs.pulseaudio}/bin/pactl set-sink-volume @DEFAULT_SINK@ -5%";
 	};
       };
     };

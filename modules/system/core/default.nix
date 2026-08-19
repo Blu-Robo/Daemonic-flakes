@@ -6,6 +6,7 @@
       locale
       bootloader
       network
+      audio
     ];
   in {
     imports = 

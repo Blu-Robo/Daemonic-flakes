@@ -5,7 +5,7 @@
       package = self.packages.${pkgs.stdenv.hostPlatform.system}.myNiri;
     };
   };
-  perSystem = { pkgs, lib, inputs', ... }: {
+  perSystem = { pkgs, lib, inputs', self', ... }: {
     packages.myNiri = inputs.wrapper-modules.wrappers.niri.wrap {
       inherit pkgs;	
       settings = {
@@ -17,12 +17,14 @@
 	  };
 	};
 	spawn-at-startup = [
+	  (lib.getExe self'.packages.myNoctalia)
 	  "${lib.getExe inputs'.zen-browser.packages.default}"
 
 	];
 	binds = {
 	  "Mod+Q".spawn-sh = lib.getExe pkgs.kitty;
 	  "Mod+C".close-window = {};
+	  "Mod+R".spawn-sh = "${lib.getExe self'.packages.myNoctalia} ipc call launcher toggle";
 	  "XF86MonBrightnessUp".spawn-sh = "${pkgs.brightnessctl}/bin/brightnessctl set 5%+";
 	  "XF86MonBrightnessDown".spawn-sh = "${pkgs.brightnessctl}/bin/brightnessctl set 5%-";
 	  "XF86AudioMute".spawn-sh = "${pkgs.pulseaudio}/bin/pactl set-sink-mute @DEFAULT_SINK@ toggle";

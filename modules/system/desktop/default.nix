@@ -4,7 +4,7 @@
       core
       niri
       sddm
-      dms
+      #dms
     ];
   in {
     imports = modules;

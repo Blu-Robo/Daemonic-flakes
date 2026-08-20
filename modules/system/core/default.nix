@@ -15,10 +15,18 @@
       ]
       ++modules;
     services = {
+      upower.enable = true;
       openssh.enable = true;
     };
     environment.systemPackages = with pkgs; [
       wget
+      unzip
+      usbutils
+      python315
+      curl
+      p7zip-rar
+      libnotify
+
     ];
     system.stateVersion = "26.05";
   };

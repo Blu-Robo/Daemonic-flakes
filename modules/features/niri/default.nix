@@ -22,7 +22,7 @@
 
 	];
 	binds = {
-	  "Mod+Q".spawn-sh = lib.getExe pkgs.kitty;
+	  "Mod+Q".spawn-sh = lib.getExe self'.packages.kitty;
 	  "Mod+C".close-window = {};
 	  "Mod+R".spawn-sh = "${lib.getExe self'.packages.myNoctalia} ipc call launcher toggle";
 	  "XF86MonBrightnessUp".spawn-sh = "${pkgs.brightnessctl}/bin/brightnessctl set 5%+";

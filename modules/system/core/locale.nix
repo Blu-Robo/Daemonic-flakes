@@ -19,5 +19,8 @@
       layout = "us";
       variant = "";
     };
+    fonts.packages = with pkgs; [
+      nerd-fonts.jetbrains-mono
+    ];
   };
 }

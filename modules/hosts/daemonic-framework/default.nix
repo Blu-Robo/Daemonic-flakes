@@ -4,6 +4,7 @@
       desktop
       daemonic-framework-configuration
       dev
+      kitty
     ];
   };
 }

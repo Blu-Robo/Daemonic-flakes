@@ -20,10 +20,10 @@
 	};
 	font = {
 	  name = "JetBrainsMono Nerd Font Mono";
-	  size = 14;
+	  size = 12;
 	};
 	settings = {
-	  font_size = 14;
+	  font_size = 12;
 
 	  disable_ligatures = "never";
 

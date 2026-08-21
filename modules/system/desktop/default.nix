@@ -3,7 +3,7 @@
     modules = with self.nixosModules; [
       core
       niri
-      sddm
+      greetd
       #dms
     ];
   in {

@@ -11,6 +11,7 @@
 	nrt = "sudo nixos-rebuild test --impure --flake .#daemonic-framework";
 	nrs = "sudo nixos-rebuild switch --impure --flake .#daemonic-framework";
 	gs = "git status";
+	ga = "git add .";
 	gc = "git commit -a";
 	gp = "git push";
       };
@@ -21,7 +22,9 @@
         theme = "";
       };
       histSize = 10000;
-      interactiveShellInit = "";
+      interactiveShellInit = ''
+        eval "$(starship init zsh)"
+      '';
     };
   users.defaultUserShell = pkgs.zsh;
   };

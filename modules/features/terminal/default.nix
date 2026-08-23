@@ -3,6 +3,7 @@
     modules = with self.nixosModules; [
       kitty
       zsh
+      starship
     ];
   in {
     imports = modules;

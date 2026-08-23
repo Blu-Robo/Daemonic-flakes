@@ -9,7 +9,7 @@
 	};
       };
     };
-    programs.regreet = {
+    services.displayManager.regreet = {
       enable = true;
       theme = {
         name = "Adwaita-dark";

@@ -25,6 +25,8 @@
 	settings = {
 	  font_size = 12;
 
+	  shell = "zsh";
+
 	  disable_ligatures = "never";
 
 	  cursor_shape = "block";

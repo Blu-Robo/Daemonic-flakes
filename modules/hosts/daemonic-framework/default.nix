@@ -5,6 +5,7 @@
       daemonic-framework-configuration
       dev
       terminal
+      school
     ]) ++ [
       inputs.nixos-hardware.nixosModules.framework-amd-ai-300-series
     ];

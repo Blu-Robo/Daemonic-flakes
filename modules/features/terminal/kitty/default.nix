@@ -18,7 +18,6 @@
 	environment = {
 	  "FONTCONFIG_FILE" = "${fontsConf}";
 	};
-	runtimePkgs = [ pkgs.fastfetch ];
 	font = {
 	  name = "JetBrainsMono Nerd Font Mono";
 	  size = 12;
@@ -26,7 +25,7 @@
 	settings = {
 	  font_size = 12;
 
-	  shell = "zsh -c 'fastfetch; exec zsh'";
+	  shell = "zsh";
 
 	  disable_ligatures = "never";
 

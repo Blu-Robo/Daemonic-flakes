@@ -24,6 +24,7 @@
 	binds = {
 	  "Mod+Q".spawn-sh = lib.getExe self'.packages.kitty;
 	  "Mod+C".close-window = {};
+          "Mod+S".screenshot-screen = {};
 	  "Mod+R".spawn-sh = "${lib.getExe self'.packages.myNoctalia} ipc call launcher toggle";
 	  "Mod+XF86MonBrightnessUp".spawn-sh = "${pkgs.brightnessctl}/bin/brightnessctl set 60%";
           "Mod+XF86MonBrightnessDown".spawn-sh = "${pkgs.brightnessctl}/bin/brightnessctl set 20%";

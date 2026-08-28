@@ -2,6 +2,7 @@
   flake.nixosModules.school = { pkgs, lib, ... }: {
     environment.systemPackages = with pkgs; [
       obsidian
+      libreoffice-qt
     ];
     services = {
       avahi = {

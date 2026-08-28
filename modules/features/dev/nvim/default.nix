@@ -31,8 +31,16 @@
         };
         
         languages = {
-          nix.enable = true;
-          clang.enable = true;
+          nix = {
+            enable = true;
+            format.enable = true;
+            lsp.enable = true;
+          };
+          clang = {
+            enable = true;
+            format.enable = true;
+            lsp.enable = true;
+          };
         };
         
         telescope.enable = true;

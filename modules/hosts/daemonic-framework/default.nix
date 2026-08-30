@@ -7,6 +7,7 @@
       terminal
       school
       zen
+      personal
     ]) ++ [
       inputs.nixos-hardware.nixosModules.framework-amd-ai-300-series
     ];

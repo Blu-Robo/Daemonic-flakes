@@ -4,14 +4,14 @@
       enable = true;
       settings = {
         add_newline = true;
-        format = "$os$username$directory";
-	right_format = "$git_branch$git_commit$git_state$git_status";
+        format = "[$os$username in $directory](fg:black bg:white)[   ](white)";
+	right_format = "[$git_state$git_status](fg:black bg:white)";
 	username = {
-	  format = "[$user]($style) ";
+	  format = "[$user]($style)";
 	  show_always = true;
 	  disabled = false;
-	  style_root = "red bold bg:0x9A348E";
-	  style_user = "yellow bold bg:0x9A348E";
+	  style_root = "white bold bg:purple";
+	  style_user = "white bold bg:purple";
         };
 	os = {
 	  format = "[$symbol]($style) ";
@@ -19,11 +19,15 @@
 	  symbols = {
 	    NixOS = "";
 	  };
-	};
-	directory = {
+          style = "fg:#6CACE4 bg:white"; }; 
+        directory = {
 	  format = "[$path]($style) ";
-	  style = "cyan bold";
+	  style = "blue bold bg:white";
+          home_symbol = "";
 	};
+        git_status = {
+          style = "bold red bg:white";
+        };
       };
     };
   };

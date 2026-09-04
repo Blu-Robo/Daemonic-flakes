@@ -26,7 +26,7 @@
       curl
       p7zip-rar
       libnotify
-
+      btop
     ];
     system.stateVersion = "26.05";
   };

@@ -5,6 +5,7 @@
       vesktop
       godot_4
       krita
+      gimp
     ];
   };
 }

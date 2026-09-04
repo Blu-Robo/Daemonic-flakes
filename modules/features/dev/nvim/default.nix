@@ -1,4 +1,4 @@
-{ self, inputs, ... }: {
+{ self, inputs, ... }: {              
   flake.nixosModules.nvim = { pkgs, lib, ... }: {
     imports = [ inputs.nvf.nixosModules.default ];
 
@@ -10,6 +10,14 @@
           name = "catppuccin";
           style = "mocha";
           transparent = true;
+        };
+        opts = {
+          tabstop = 2;
+          shiftwidth = 0;
+          ac = true;
+          nu = true;
+          rnu = true;
+          et = true;
         };
 
         filetree.neo-tree = {
@@ -41,7 +49,13 @@
             format.enable = true;
             lsp.enable = true;
           };
+          tex = {
+            enable = true;
+            format.enable = true;
+            lsp.enable = true;
+          };
         };
+        
         
         telescope.enable = true;
       };

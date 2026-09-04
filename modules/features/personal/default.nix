@@ -3,6 +3,7 @@
     environment.systemPackages = with pkgs; [
       shotcut
       vesktop
+      godot_4
     ];
   };
 }

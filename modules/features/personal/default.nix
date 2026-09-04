@@ -4,6 +4,7 @@
       shotcut
       vesktop
       godot_4
+      krita
     ];
   };
 }
